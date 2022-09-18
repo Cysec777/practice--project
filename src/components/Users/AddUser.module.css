@@ -1,0 +1,22 @@
+.input {
+  width: 90%;
+  max-width: 40rem;
+  margin: 4rem auto;
+  padding: 1rem;
+}
+
+.input label {
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.input input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+}
