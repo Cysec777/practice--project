@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import Card from '../UI/Card';
-import Button from '../UI/Button';
-import classes from './AddUser.module.css';
+import React, { useState } from "react";
+import Card from "../UI/Card";
+import Button from "../UI/Button";
+import classes from "./AddUser.module.css";
 
 const AddUser = () => {
-  const [enteredUsername, setEnteredUsername] = useState('');
-  const [enteredAge, setEnteredAge] = useState('');
+  const [enteredUsername, setEnteredUsername] = useState("");
+  const [enteredAge, setEnteredAge] = useState("");
 
   const usernameChangeHandler = function (e) {
     setEnteredUsername(e.target.value);
@@ -18,11 +18,19 @@ const AddUser = () => {
   const addUserHandler = function (e) {
     e.preventDefault();
 
+    // Adding validation to a user
+    if (enteredUsername.length === 0 || enteredAge.length === 0) {
+      return;
+    }
+    if (+enteredAge < 1) {
+      return;
+    }
+
     console.log(enteredUsername, enteredAge);
 
     // to clear the input
-    setEnteredUsername('');
-    setEnteredAge('');
+    setEnteredUsername("");
+    setEnteredAge("");
   };
 
   return (
